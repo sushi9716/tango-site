@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tango-site.zk8vbv658r.workers.dev/sitemap.xml
