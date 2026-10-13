@@ -6,6 +6,7 @@
 <title>たんごめぐり | 暗記の復習を自動で組み立てるアプリ</title>
 <meta name="description" content="たんごめぐりは、忘れかけた頃に復習を出す暗記アプリです。英単語、用語、フレーズをカードにして、復習の予定は自動で決まります。聞き流しはロック画面でも再生。登録なし、ブラウザで使えます。">
 <link rel="canonical" href="https://tango-site.zk8vbv658r.workers.dev/">
+<script>try{var t=localStorage.getItem("tango-site-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
 <meta name="theme-color" content="#f3f3f1">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="たんごめぐり">
@@ -103,11 +104,35 @@ details p{margin:0 0 16px;color:var(--sub);font-size:15px}
 .final .btn{background:var(--btnink);color:var(--btn)}
 footer{padding-block:36px 56px;text-align:center;font-size:13px;color:var(--sub)}
 @media (prefers-reduced-motion:no-preference){.btn{transition:transform .15s}.btn:hover{transform:translateY(-2px)}}
+
+.tg{position:relative;flex:none;width:64px;height:34px;padding:0;border-radius:999px;border:1px solid var(--line);background:var(--tint);cursor:pointer;color:var(--sub);-webkit-tap-highlight-color:transparent}
+.tg svg{position:absolute;top:50%;width:16px;height:16px;translate:0 -50%;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.tg .i-sun{left:9px}.tg .i-moon{right:9px}
+.tg .kn{position:absolute;top:3px;left:3px;width:26px;height:26px;border-radius:50%;background:var(--accent);color:#1a1a1a;display:grid;place-items:center;transition:translate .35s cubic-bezier(.34,1.45,.5,1);box-shadow:0 1px 4px rgba(0,0,0,.25)}
+.tg .kn svg{position:static;translate:none;width:15px;height:15px}
+.tg .kn .k-moon{display:none}
+.tg[aria-checked="true"] .kn{translate:30px 0}
+.tg[aria-checked="true"] .kn .k-sun{display:none}.tg[aria-checked="true"] .kn .k-moon{display:block}
+.tg:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+html.tr,html.tr *{transition:background-color .3s ease,color .3s ease,border-color .3s ease !important}
+html.tr .tg .kn{transition:translate .35s cubic-bezier(.34,1.45,.5,1) !important}
+@media (prefers-reduced-motion:reduce){.tg .kn{transition:none}html.tr,html.tr *{transition:none !important}}
+@media (max-width:420px){header.top .wrap{gap:8px}.brand{font-size:16px;gap:8px}.btn.s{padding:0 14px}.tg{width:58px}.tg[aria-checked="true"] .kn{translate:24px 0}.tg .i-sun{left:8px}.tg .i-moon{right:8px}.brand{font-size:15px}.logoimg{width:36px;height:36px}.btn.s{font-size:13px;padding:0 12px}}
+.brand,.btn.s{white-space:nowrap}
+
+.legal{max-width:640px;margin:0 auto;text-align:left}
+.legal details{border-top:1px solid var(--line);padding:2px 0}
+.legal details:last-child{border-bottom:1px solid var(--line)}
+.legal summary{cursor:pointer;padding:12px 0;font-weight:700;color:var(--ink);list-style:none;display:flex;justify-content:space-between;gap:12px}
+.legal summary::-webkit-details-marker{display:none}
+.legal summary::after{content:"+";color:var(--sub)}
+.legal details[open] summary::after{content:"\2212"}
+.legal p{margin:0 0 14px;font-size:13px;line-height:1.9;color:var(--sub)}
 </style>
 
 <header class="top"><div class="wrap">
 <a class="brand" href="#top"><img width="40" height="40" class="logoimg logol" alt="" src="logo.png"><img width="40" height="40" class="logoimg logod" alt="" src="logo-dark.png">たんごめぐり</a>
-<span class="sp"></span><a class="btn s" href="https://tangoes.zk8vbv658r.workers.dev" target="_blank" rel="noopener">アプリを開く</a></div></header>
+<span class="sp"></span><button class="tg" id="tg" type="button" role="switch" aria-checked="false" aria-label="ダークモード"><svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6 7 7M17 17l1.4 1.4M5.6 18.4 7 17M17 7l1.4-1.4"/><circle cx="12" cy="12" r="4"/></svg><svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4 6.5 6.5 0 0 0 20 14.5z"/></svg><span class="kn"><svg class="k-sun" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6 7 7M17 17l1.4 1.4M5.6 18.4 7 17M17 7l1.4-1.4"/><circle cx="12" cy="12" r="4"/></svg><svg class="k-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4 6.5 6.5 0 0 0 20 14.5z"/></svg></span></button><a class="btn s" href="https://tangoes.zk8vbv658r.workers.dev" target="_blank" rel="noopener">アプリを開く</a></div></header>
 
 <main id="top">
 <div class="wrap hero">
@@ -153,7 +178,7 @@ footer{padding-block:36px 56px;text-align:center;font-size:13px;color:var(--sub)
 <section class="band"><div class="wrap">
 <div class="feat">
 <div class="txt"><p class="eyebrow">Import &amp; AI fill</p><h2>リストを取り込んで、例文はAIが補う</h2>
-<p>CSVからカードをまとめて入れられます。暗記メーカー形式のCSVにも対応しています。英単語の例文や和訳が空のときは、AIが補います。</p>
+<p>CSVからカードをまとめて入れられます。「question」「answers」列を持つCSVにも対応しています。英単語の例文や和訳が空のときは、AIが補います。</p>
 <ul class="ck"><li>例文だけ、和訳だけ、別案の作り直しも選べます</li><li>入れた順に番号が付き、番号の範囲だけ練習できます</li><li>重複したカードは、まとめて整理できます</li></ul></div>
 <div class="vis"><div class="ph"><img loading="lazy" width="780" height="1688" alt="デッキ内の単語一覧" src="words.png"></div></div>
 </div></div></section>
@@ -176,6 +201,7 @@ footer{padding-block:36px 56px;text-align:center;font-size:13px;color:var(--sub)
 <tr><td>聞く学習</td><td>発音確認のみ</td><td class="me">ロック中も可</td></tr>
 <tr><td>入手</td><td>ストアから入れる</td><td class="me">ブラウザで開く</td></tr>
 </tbody></table></div>
+<p class="note" style="text-align:center;margin-top:16px">一般的な傾向をまとめたものです。アプリによって異なります。調査時点: 2026年10月</p>
 </div></section>
 
 <section id="start"><div class="wrap">
@@ -202,7 +228,7 @@ footer{padding-block:36px 56px;text-align:center;font-size:13px;color:var(--sub)
 <details><summary>データはどこに保存されますか</summary><p>お使いの端末のブラウザの中です。設定から、クラウドへのバックアップや書き出しもできます。Safariとホーム画面のアプリは保存先が別なので、ホーム画面に追加してからカードを登録してください。</p></details>
 <details><summary>AIで補完するとき、何が送られますか</summary><p>補完するカードの内容が、連携先のサーバーに送られます。補完を使わなければ送られません。</p></details>
 <details><summary>画面を閉じても、音声は止まりませんか</summary><p>バックグラウンド再生を選べば、ロック画面でも流れます。端末の読み上げで流す通常の聞き流しは、画面を閉じると止まることがあります。</p></details>
-<details><summary>手持ちのリストは取り込めますか</summary><p>CSVで取り込めます。暗記メーカー形式(question、answers、explanation列)にも対応していて、例文と和訳は自動で入ります。</p></details>
+<details><summary>手持ちのリストは取り込めますか</summary><p>CSVで取り込めます。「question」「answers」「explanation」列を持つ形式にも対応していて、例文と和訳は自動で入ります。</p></details>
 </div></div></section>
 
 <div class="wrap"><div class="final">
@@ -211,7 +237,20 @@ footer{padding-block:36px 56px;text-align:center;font-size:13px;color:var(--sub)
 <a class="btn" href="https://tangoes.zk8vbv658r.workers.dev" target="_blank" rel="noopener">たんごめぐりを開く</a>
 </div></div>
 </main>
-<footer><div class="wrap">© 2026 たんごめぐり</div></footer>
+<footer><div class="wrap">
+<div class="legal">
+<details><summary>運営者について</summary><p>個人が開発・運営しています。このサイトとアプリは、特定の企業・出版社・サービスとは関係ありません。</p></details>
+<details><summary>免責事項</summary><p>学習の成果は保証しません。アプリの利用で生じた損害について、運営者は責任を負いません。データは端末のブラウザに保存されるため、ブラウザのデータ消去や端末の変更で消えることがあります。定期的にバックアップを取ってください。取り込むリストや単語帳の内容は、ご自身に使う権利があるものに限ってください。AIが補う例文や和訳には誤りが含まれることがあります。</p></details>
+<details><summary>プライバシーについて</summary><p>アカウント登録はなく、名前やメールアドレスは集めません。学習データは端末のブラウザに保存され、AIによる補完、音声の作成、通知、クラウドバックアップを使わない限り、端末の外へは送られません。これらを使うときは、必要な内容(カードの文字など)が、連携先のサーバー(Cloudflare)に送られます。このサイトでは、アクセス解析などのCookieは使っていません。</p></details>
+</div>
+<p style="margin:18px 0 0">&copy; 2026 たんごめぐり</p></div></footer>
 
+<script>
+(function(){var r=document.documentElement,b=document.getElementById("tg"),m=window.matchMedia("(prefers-color-scheme: dark)"),tc=document.querySelector('meta[name="theme-color"]');
+function cur(){var t=r.getAttribute("data-theme");return t?t==="dark":m.matches}
+function sync(){var d=cur();b.setAttribute("aria-checked",d?"true":"false");if(tc)tc.setAttribute("content",d?"#141414":"#f3f3f1")}
+b.addEventListener("click",function(){var n=cur()?"light":"dark";r.classList.add("tr");r.setAttribute("data-theme",n);try{localStorage.setItem("tango-site-theme",n)}catch(e){}sync();setTimeout(function(){r.classList.remove("tr")},400)});
+(m.addEventListener?m.addEventListener("change",sync):m.addListener(sync));sync()})();
+</script>
 </body>
 </html>
